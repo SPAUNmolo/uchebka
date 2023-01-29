@@ -1,0 +1,27 @@
+function App() {
+  const [value, setValue] = useState('текст сюда');
+	const [isEdit, setIsEdit] = useState(false);
+	
+	let elem;
+	if (!isEdit) {
+		elem = <span onChange={() => setIsEdit(true)}>
+			{value}
+		</span>;
+	} else {
+		elem = <input
+      className="myEdit"
+			value={value}
+			onChange={event => setValue(event.target.value)}
+					/>;
+	}
+		return (
+<div  >
+<p/>
+	
+<button className="myBtn2" onClick={()=>setIsEdit(true)}>Редактировать</button>
+<button className="myBtn2" onClick={()=>setIsEdit(false)}>Сохранить</button>
+<p/>
+{elem}
+</div>
+  )
+}
