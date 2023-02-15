@@ -1,0 +1,17 @@
+//Сумма всех элементов массива
+
+function sum(numbers) {
+return numbers.reduce((a, b) => a + b, 0);  }
+
+
+
+
+
+
+//Сумма всех элементов массива
+
+function sum (numbers) {
+let spaun = 0
+for (let i of numbers){
+spaun += i  }
+return spaun  };
